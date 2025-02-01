@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background-color:#0A100D;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color:#0A100D;
+
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+
+
+}
+
+#logo{
+    justify-content: left;
+    align-items: left;
+    height: 50px;
+    width: 50px;
+}
+
+#burgerIcon{
+    height: 40px;
+    width: 40px;
+}
+
+
+@media only screen and (max-width:649px) {
+    #navigation{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+    
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        background-color: #0A100D;
+        transition: all 0.9s ease;
+    }
+}
+
+
+
+#navigation.slideIn {
+    left: 0;
+    
+}
+
+/* nav styling + underline */
+.nav{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+    font-size: 18px;
+    font-family: 'prata';
+    position: relative;
+}
+
+.nav :hover {
+    color: #ffffff;
+  }
+  
+
+
+.nav::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+/* underline visibility */
+.nav:hover::before {
+    transform: scaleX(1);
+  }
+
+
+@media only screen and (min-width:650px) {
+    #navigation {
+        display: flex;
+        gap: 15px;
+    }
+
+    #navigation > a {
+        color: rgb(255, 255, 255);
+        
+    } 
+
+
+
+}
+
+/* main section */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hero section */
+#hero {
+    
+    background: url('./images/INM201SBB-Mariela\ Salinas\ explore\ upload\ 2.jpg') center/cover no-repeat;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: white;
+    text-align: center;
+    margin-top: -50px;
+    
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+  }
+
+.hero-content > h1{
+    font-family: "prata";
+    color: #ffffff;
+    margin-top: 50px;
+    font-size: 70px;
+    opacity: 1;
+  }
+
+.hero-content > p{
+    font-size: 15px;
+    font-family: 'poppins';
+
+  }
+
+
+  /* hire me section */
+#hireMe{
+    font-family: 'prata';
+    width: 100%;
+    background-color: #0A100D;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#hireMe.visible {
+    opacity: 1;
+}
+
+#title1{
+    width: 100%;
+    font-family: 'prata';
+    font-size: 40px;
+    color: white;
+    background-color: #6E0D25;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    opacity: 2;
+}
+
+#hireMe >.profile-pic {
+    width: 350px;             /* Initial size of the circle */
+    height: 350px;            /* Initial size of the circle */
+    border-radius: 50%;       /* Make the image a circle */
+    object-fit: cover;        /* Ensure the image covers the area without stretching */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    margin: 10% 10%;
+    display: flex;
+    float: left;
+}
+
+/* Apply scaling when hovered */
+#hireMe > .profile-pic:hover {
+    transform: scale(1.5);    /* Scale the image to 1.5 times its original size */
+}
+#hireMe > p {
+    
+    font-family: 'poppins';
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 17% 5%;
+}
+
+/* first name, last name, email, section */
+#label1 {
+    font-family: 'prata';
+    text-align: center;
+    color: #553b7b;
+}
+#label2 {
+    font-family: 'prata';
+    
+    color: #553b7b;
+}
+#label3 {
+    font-family: 'prata';
+    
+    color: #553b7b;
+}
+
+#label4 {
+    font-family: 'prata';
+    
+    color: #553b7b;
+}
+
+
+
+
+/* services section */
+
+#services{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+}
+
+
+#services> h1{
+    font-family: 'prata';
+    font-size: 40px;
+    color: white;
+    background-color: #6E0D25;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* icons rotating back and forth with hover */
+#paintbrush {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    transition: transform 0.5s ease; /* Optional: smooth transition */
+}
+
+
+#paintbrush:hover {
+    animation: rotateBackAndForth 1s ease-in-out infinite;
+}
+
+
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    50% {
+        transform: rotate(12deg); /* Rotate 12 degrees */
+    }
+    100% {
+        transform: rotate(0deg); /* Return to initial position */
+    }
+}
+
+#video {
+    width: 10%; /* Adjust size as needed */
+    height: 10%; /* Adjust size as needed */
+    transition: transform 0.5s ease; /* Optional: smooth transition */
+}
+
+/* Apply the animation when hovering */
+#video:hover {
+    animation: rotateBackAndForth 1s ease-in-out infinite;
+}
+
+/* Define the keyframes for the back-and-forth rotation */
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    50% {
+        transform: rotate(12deg); /* Rotate 12 degrees */
+    }
+    100% {
+        transform: rotate(0deg); /* Return to initial position */
+    }
+}
+
+
+
+
+
+
+
+
+
+#man {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    transition: transform 0.5s ease; /* Optional: smooth transition */
+}
+
+/* Apply the animation when hovering */
+#man:hover {
+    animation: rotateBackAndForth 1s ease-in-out infinite;
+}
+
+/* Define the keyframes for the back-and-forth rotation */
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    50% {
+        transform: rotate(12deg); /* Rotate 12 degrees */
+    }
+    100% {
+        transform: rotate(0deg); /* Return to initial position */
+    }
+}
+
+
+#camera:hover{
+    animation: rotateBackAndForth 1s ease-in-out infinite;
+}
+
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(0deg); /* Initial position */
+    }
+    50% {
+        transform: rotate(12deg); /* Rotate 12 degrees */
+    }
+    100% {
+        transform: rotate(0deg); /* Return to initial position */
+    }
+}
+
+#globe:hover{
+    animation: rotateBackAndForth 1s ease-in-out infinite;
+}
+
+/* heading icons images */
+#paintbrush{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    height: 75px;
+    width: 75px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#video{
+    display: block;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75px;
+    width: 120px;
+}
+
+#camera{
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    width: 85px;
+    transition: transform 0.5s ease; /* Optional: smooth transition */
+}
+
+#globe{
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 80px;
+    transition: transform 0.5s ease; /* Optional: smooth transition */
+}
+
+#man{
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 80px;
+    transition: transform 0.5s ease; /* Optional: smooth transition */
+}
+
+
+
+#services> h2 ,h3 ,h4 ,h5 ,h6{
+    font-family: 'Prata';
+    font-size: 50px;
+    /* text-transform: uppercase; */
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#services> p{
+    font-family: 'poppins';
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+#softwareskills{
+    width: 100%;
+}
+
+#softwareskills>h1{
+    font-family: 'Prata';
+    font-size: 50px;
+    margin-top: 50px;
+    padding: 7px;
+    background-color: #f1bbdc;
+    color: white;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#softwareskills>h2 ,h3 ,h4 ,h5 ,h6{
+    font-family: 'Prata';
+    font-size: 50px;
+    /* text-transform: uppercase; */
+    margin: 10px;
+    margin-top: 50px;
+}
+
+
+
+/*contact section */
+
+#contact{
+
+    width: 100%;
+    height: 500px;
+    background-color: #f1bbdc;
+    position: relative;
+    margin-top: 500px;
+    overflow: hidden;
+    margin-bottom: 50px;
+} 
+
+#contact > h3{
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-family: "prata";
+     margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: none;
+}
+
+#contact > form { 
+    width: 100%;
+    height: 1000px;
+    background-color: #fdeca8;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact > form > input [type="text"][type="email"]{
+    width: 600px;
+    height: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact input[type="text"],
+#contact input[type="email"]{
+    width: 700px;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    margin-top: 40px;
+    border-radius: 20px;
+    border-color: #f1bbdc;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* contact hover styling */
+#contact input[type="text"]:hover{
+    background-color: #cfd0f4;
+    box-shadow: none;
+}
+
+#contact input[type="email"]:hover{
+    background-color: #cfd0f4;
+    box-shadow: none;
+}
+
+/* button */
+input[type=submit]{
+    margin-left: 736px;
+
+}
+
+/* footer */
+footer {
+
+    width: 100%;
+    height: 80px;
+    background-color: #6E0D25;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+footer > p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: white;
+
+    margin-left: 35px;
+}
+
+/* grid template desktop version */
+#myprojects{
+    margin-top: 100px;
+    background-color: #0A100D;
+    display: grid;
+    justify-content: center;
+    padding-top: 100px;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(15, 300px);
+    gap: 20px;
+    grid-template-areas: 
+    "pic_1 pic_1 pic_1" 
+    "pic_1 pic_1 pic_1"
+    "pic_2 pic_2 pic_2"
+    "pic_3 pic_3 pic_4"
+    "pic_3 pic_3 pic_4"
+    "pic_3 pic_3 pic_4"
+    "pic_5 pic_6 pic_6"
+    "pic_5 pic_6 pic_6"
+    "pic_7 pic_7 pic_7"
+    "pic_7 pic_7 pic_7"
+    "pic_8 pic_9 pic_9"
+    "pic_8 pic_9 pic_9"
+    "pic_10 empty empty"
+    "pic_10 empty1 empty1";
+}
+
+#myprojects > article {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F786AA;
+    font-size: 35px;
+    font-family: 'prata';
+    opacity: 0; 
+    transition: opacity 0.3s ease;}
+
+@media screen and (max-width: 650px){
+    .project-title{
+        font-size: 15px;
+    }
+
+    #hireMe >.profile-pic {
+        width: 190px;             /* Initial size of the circle */
+        height: 190px;            /* Initial size of the circle */
+        border-radius: 50%;       /* Make the image a circle */
+        object-fit: cover;        /* Ensure the image covers the area without stretching */
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+        margin: 15% 20% 5% 30%;
+        display: inline-block;
+        /* float: left; */
+    }
+
+    #hireMe > .profile-pic.expanded {
+        transform: scale(1.1);    /* Scale the image to 1.5 times its original size */
+    }
+
+    #hireMe > p {
+    
+        font-family: 'poppins';
+        font-size: 25px;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        margin: 10% 5%;
+    }
+
+    #services> p{
+        display: flex;
+        margin: 5% 6% 20% 10%;
+    }
+
+    #services> .p2{
+        display: flex;
+        margin: 5% 6% 20% 3%;
+    }
+}
+
+
+/* hover effect */
+
+/* scale image */
+#myprojects > article:hover {
+    transform: scale(1.1);
+}
+
+/* title visbility turned on */
+#myprojects > article:hover .project-title {
+    opacity: 1; 
+}
+
+/* grid template mobile version */
+@media screen and (max-width: 650px){
+    main{
+        padding: 0px;
+    }
+
+    #myprojects{
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(17,100px);
+        grid-template-areas: 
+        "pic_2 pic_2"
+        "pic_3 pic_5"
+        "pic_1 pic_1"
+        "pic_10 pic_10"
+        "pic_7 pic_6"
+        "pic_9 pic_9"
+        "pic_8 pic_4";
+}
+}
+
+/* grid template images */
+
+#myprojects > article {
+    position: relative; /* Make the article element a positioned container */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; /* Optional smooth transform effect */
+    
+  }
+  
+  #myprojects > article::before {
+    content: ''; /* Necessary for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    opacity: 0; /* Make the overlay invisible initially */
+    transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+  }
+  
+  #myprojects > article:hover::before {
+    opacity: 1; /* Show the dark overlay on hover */
+  }
+  
+/* grid template images */
+#myprojects > article:nth-child(1){
+    background-image: url(./images/lana\ magazine.jpg);
+    width: 90%;
+    height: 90%;
+    grid-area: pic_1;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(2){
+    background-image: url(./images/prelibatio\ logo.jpg);
+    grid-area: pic_2;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+
+}
+
+#myprojects > article:nth-child(3){
+    background-image: url(./images/taste.png);
+    grid-area: pic_3;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(4){
+    background-image: url(./images/dairydrop.png);
+    grid-area: pic_4;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(5){
+    background-image: url(./images/rapunzel.jpg);
+    grid-area: pic_5;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(6){
+    background-image: url(./images/lowpoly.jpg);
+    grid-area: pic_6;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(7){
+    background-image: url(./images/AURORA.jpg);
+    grid-area: pic_7;
+    width: 90%;
+    height: 100%;
+    padding-left: 10%;
+    padding-bottom: -20%;
+}
+
+#myprojects > article:nth-child(8){
+    background-image: url(./images/hair\ ad.jpg);
+    grid-area: pic_8;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(9){
+    background-image: url(./images/disney\ icons.jpg);
+    grid-area: pic_9;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+#myprojects > article:nth-child(10){
+    background-image: url(./images/INM201BB\ Mariela\ Salinas\ unstructured\ pattern.jpg);
+    grid-area: pic_10;
+    width: 90%;
+    height: 90%;
+    padding-left: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
